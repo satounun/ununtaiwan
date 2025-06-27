@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taipei | 架空 台湾観光案内サイト</title>
+  <!-- 共通リセット -->
+  <link rel="stylesheet" href="../common/reset.css" />
+  <!-- フォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
+  <!-- ページ固有スタイル -->
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/modal.css" />
+</head>
+
+<body id="top">
+  <!-- loadingここから (bodyのすぐ下に)-->
+  <div class="loading" id="loading">
+    <div class="loading_logo"><img src="../images/taiwanLogo.svg" alt=""></div>
+  </div>
+  <div id="wrapper">
+    <!-- ■ ヘッダー ──────────────────────────────────── -->
+    <header>
+      <h1 class="pc_h1"><img src="../images/taiwanLogo.svg" alt=""></h1>
+      <nav class="pc_nav">
+        <ul>
+          <li><a href="../index.html" class="all-caps">home</a></li>
+          <li><a href="index.html">台北</a></li>
+          <li><a href="../taichu/index.html">台中</a></li>
+          <li><a href="../tainan/index.html">台南</a></li>
+          <li><a href="#">当サイトのポリシー</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ■ ヒーローセクション ──────────────────────────────────── -->
+    <!-- ── SP用固定ロゴ（デフォルトでは隠す。メディアクエリで表示） ── -->
+    <div class="sp-logo">
+      <img src="../images/taiwanLogo.svg" alt="サイトロゴ" />
+    </div>
+    <div class="hero">
+      <!-- 背景画像 -->
+      <img src="images/pcHeroTaipei.png" alt="台北の風景" class="hero_bg-image" />
+      <!-- 白抜き“台北”文字画像 -->
+      <img src="images/pcTaipeiMainLogo.png" alt="台北" class="hero_title-image" />
+      <!-- キャッチコピー（説明文） -->
+      <div class="hero_copy">
+        台北市は台湾の中心地です。活気にあふれる街台北では
+        さまざまな建物、台北を生きる人の美しい風景を見ることができます。
+      </div>
+      <div class="hero_sns">
+        <a href="#"><img src="../images/fbLogo.png" alt="Facebook" /></a>
+        <a href="#"><img src="../images/instaLogo.png" alt="Instagram" /></a>
+        <a href="#"><img src="../images/twittterLogo.png" alt="旧Twitter" /></a>
+      </div>
+
+      <!-- トップへ戻るボタン -->
+      <a href="#top" class="back-to-top" aria-label="トップへ戻る">
+        <img src="images/gotoTop.svg" alt="Topへ戻る" />
+      </a>
+    </div>
+    <!-- パンくずナビ -->
+    <nav class="breadcrumb">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><span class="sep">&gt;</span></li>
+        <li><a href="#">Travel</a></li>
+        <li><span class="sep">&gt;</span></li>
+        <li>台北</li>
+      </ul>
+    </nav>
+
+    <!-- ■ メインコンテンツ ──────────────────────────────────── -->
+    <main>
+      <!-- ハンバーガーメニュー -->
+      <div class="hamburger" id="open_nav">
+        <img src="../images/hamburger.svg" alt="">
+      </div>
+
+      <!-- ■ Attraction 観光名所 -->
+      <section id="attraction">
+        <h2 class="section-title section-title--left">
+          <div class="section-title_text">
+            <span class="en-text">Attraction</span> <span class="jp-text">観光名所</span>
+          </div>
+        </h2>
+
+        <!-- — 九份 — -->
+        <article class="attraction-item">
+          <h3>九份</h3>
+
+          <!-- ここからラッパーを追加 -->
+          <div class="attraction-content">
+            <!-- ── 左：画像コンテナ ── -->
+            <div class="attraction-item_media">
+              <!-- メイン画像 -->
+              <img src="images/kyubun-main.png" alt="九份 メイン画像" class="main-img" />
+
+              <!-- サブ画像を横並び -->
+              <div class="sub-imgs">
+                <img src="images/kyubunSub-01.png" alt="九份 サブ画像1" />
+                <img src="images/kyubunSub-02.png" alt="九份 サブ画像2" />
+              </div>
+            </div>
+
+            <!-- ── 右：文字コンテナ ── -->
+            <div class="text-block">
+              <!-- 説明文 -->
+              <p class="description">
+                細い路地の階段に沿って建つ古い館に、提灯が
+                灯るノスタルジックな風景。1989年、映画「非
+                情城市」の舞台になったことをきっかけに再び
+                注目を集めると共に、日本では、九份の町中に
+                ある建物が2001年公開の映画「千と千尋の神隠
+                し」に登場する湯婆婆の湯屋を彷彿させるとし
+                て話題に。日本統治時代に建てられた古い建物
+                が残ることから、どこか懐かしい雰囲気が漂う
+                町並みは日本人の琴線に触れ、今や台湾で行き
+                たい観光地ナンバーワンとなりました。
+              </p>
+              <!-- 推奨時間パネル -->
+              <p class="time">
+                おすすめ観光時間は幻想的な夕暮れが包らう
+              </p>
+              <p class="time2">
+                15:00～19:00
+            </div>
+          </div> <!-- ── /.attraction-content ここまで ── -->
+        </article>
+
+        <div class="separator"></div>
+
+        <!-- — 台北101 — -->
+        <article class="attraction-item">
+          <h3>台北101</h3>
+
+          <!-- ここからラッパーを追加 -->
+          <div class="attraction-content">
+            <!-- ── 左：画像コンテナ ── -->
+            <div class="attraction-item_media">
+              <!-- メイン画像 -->
+              <img src="images/pcTaipei101Sub-main.jpg" alt="台北101 メイン画像" class="main-img" />
+
+              <!-- サブ画像を横並び -->
+              <div class="sub-imgs">
+                <img src="images/pcTaipei101Sub-01.jpg" alt="台北101 サブ画像1" />
+                <img src="images/pcTaipei101Sub-02.jpg" alt="台北101 サブ画像2" />
+              </div>
+            </div>
+
+            <!-- ── 右：文字コンテナ ── -->
+            <div class="text-block">
+              <!-- 説明文 -->
+              <p class="description">
+                高さは509.2m、地下5階&#65291;地上101階からなり、名前の由来にもなっている。
+                エレベーターは東芝製で、毎分1,010メートル（時速60.6キロメートル）の速さで上昇でき、
+                地上1階から展望台のある89階（地上382.2メートル）まで39秒で到達する。
+                展望台、オフィス、レストラン、ショッピングモールなどが入る台湾を代表するランドマーク。
+                有名なカウントダウンパーティーをはじめ節目に合わせたライトアップを行っています。
+              </p>
+              <!-- 推奨時間パネル -->
+              <p class="time">
+                おすすめ観光時間は展望台営業時間帯
+              </p>
+              <p class="time2">
+                11:00～19:00
+            </div>
+          </div> <!-- ── /.attraction-content ここまで ── -->
+        </article>
+
+        <div class="separator"></div>
+
+
+        <!-- ■ NightMarket 夜市 -->
+        <section id="nightmarket">
+          <h2 class="section-title section-title--right">
+            <div class="section-title_text">
+              <span class="en-text">NightMarket</span>
+              <span class="jp-text">夜市</span>
+            </div>
+          </h2>
+          <div class="nightmarket_wrapper">
+            <div class="nightmarket_textA">
+              <p>
+                台北観光の夜の目玉と言えば、なんと言っても夜市〈ナイトマーケット〉
+                があります。毎日市内の各所でひらかれ、夕方から夜遅くまで多くの人々で賑わっています。
+                絶品B級グルメ・小吃からファッション・ゲームといったお店が集まっています。
+              </p>
+            </div>
+            <div class="nightmarket_imgB">
+              <img src="images/pcYoichi-01.jpg" alt="夜市 イメージ" />
+            </div>
+          </div>
+          <div class="nightmarket_wrapper">
+            <div class="nightmarket_linksC">
+              <a href="#" class="js-modal-trigger" data-modal="ningxia">
+                <img src="images/yoichiBtn-01.svg" alt="寧夏夜市" /></a>
+              <a href="#" class="js-modal-trigger" data-modal="raohe">
+                <img src="images/yoichiBtn-02.png" alt="饒河街夜市" /></a>
+              <a href="#" class="js-modal-trigger" data-modal="shilin">
+                <img src="images/yoichiBtn-03.svg" alt="士林夜市" /></a>
+              <a href="#" class="js-modal-trigger" data-modal="tonghua">
+                <img src="images/yoichiBtn-04.svg" alt="通化夜市" /></a>
+            </div>
+            <div class="nightmarket_imgD">
+              <img src="images/pcYoichi-02.jpg" alt="夜市 イメージ" />
+            </div>
+          </div>
+        </section>
+        <div class="separator"></div>
+
+        <!-- ■ Access アクセス -->
+        <section id="access">
+          <h2 class="section-title section-title--left">
+            <div class="section-title_text">
+              <span class="en-text">Access</span>
+              <span class="jp-text">アクセス</span>
+            </div>
+          </h2>
+          <div class="accsec_info">
+            <p>各地へのアクセスにご利用ください</p>
+          </div>
+          <!-- バナー画像 -->
+          <div class="access_banner">
+            <img src="images/pcAccess.jpg" alt="台北 アクセス全体マップ" />
+          </div>
+
+          <!-- 各交通手段 -->
+          <div class="access_grid">
+            <div class="access_item">
+              <h4><span>■MRT</span>：初乗り20元</h4>
+              <p>
+                乗り方は日本の地下鉄とほぼ同じ。改札を通る時は、
+                切符・ICカード共にタッチ。台北MRTは全て各駅停車です。
+              </p>
+            </div>
+            <div class="access_item">
+              <h4><span>■バス</span>：初乗り15元</h4>
+              <p>
+                バス停はポールが立っているだけ。大通りでは車道の真ん中のバスレーン沿いにあります。
+                乗りたい場合、バスに向かって手を挙げます。乗車して現金で払う場合は運転手に先行を告げて運賃箱にお金を入れます。
+              </p>
+            </div>
+            <div class="access_item">
+              <h4><span>■タクシー</span>：初乗り70元</h4>
+              <p>
+                市内の移動で気軽に使うことが出来ます。MRTなどが運行しない深夜中や早朝の移動にも便利です。
+                新幹線の駅や有名観光地などにはタクシー乗り場が準備されているので、そこから乗りましょう。
+                ホテルならフロントで呼んでもらいます。
+              </p>
+            </div>
+            <div class="access_item">
+              <h4 class="easycard-off"><span class="all-caps"></span>■悠遊カード：販売額100元</h4>
+              <h4 class="easycard-on"><span class="all-caps">■easycard</span>&emsp;悠遊カード：販売額100元</h4>
+              <p>
+                現金をチャージして使うことが出来る交通系ICカード。
+                台北旅行の際に手に入れておくと便利です。MRT・バス・台湾鉄路などで使用することができ、
+                切符を買う手間がなく、運賃が割引（MRTは二割引き）になります。
+              </p>
+              <img src="images/pcYuyuCard.jpg" alt="悠遊カード" class="easycard-img" />
+            </div>
+        </section>
+    </main>
+    <footer>
+      <div class="footerLine">
+        <p class="footerFlag"><img src="../images/taiwanFlag.png" alt=""></p>
+        <div class="footerWrap">
+          <nav class="footerNav">
+            <ul>
+              <li class="li_mb"><a href="#">TOPへもどる</a></li>
+              <li><a href="../index.html" class="all-caps">home</a></li>
+              <li><a href="#top">台北</a></li>
+              <li><a href="../taichu/index.html">台中</a></li>
+              <li><a href="../tainan/index.html">台南</a></li>
+              <li><a href="">当サイトのポリシー</a></li>
+              <li><a href="">お問い合わせ</a></li>
+            </ul>
+          </nav>
+          <p><a href="#topSec"><img src="../images/taiwanLogo.svg" alt=""></a></p>
+          <div class="sns_footer">
+            <ul>
+              <li><a href="#"><img src="../images/fbLogo.png" alt=""></a></li>
+              <li><a href="#"><img src="../images/instaLogo.png" alt=""></a></li>
+              <li><a href="#"><img src="../images/twittterLogo.png" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="small"><small>Copyright (C) 2023 TAIWAN.traveler.cc</small></p>
+    </footer>
+  </div>
+
+  <!-- ドロワーメニューここから（footer下、/body前） -->
+  <nav id="nav">
+    <div class="logo">
+      <a href="#topSec"><img src="../images/taiwanLogo.svg" alt=""></a>
+    </div>
+    <div class="batu" id="batu">
+      <img src="../images/batu.png" alt="">
+    </div>
+    <ul>
+      <li class="menu">Menu</li>
+      <li class="libottom"><a href="../index.html" class="liline">HOME</a></li>
+      <li class="libottom2"><a href="#top" class="liline">台北</a></li>
+      <li class="libottom2"><a href="../taichu/index.html" class="liline">台中</a></li>
+      <li class="libottom"><a href="../tainan/index.html" class="liline">台南</a></li>
+      <li class="libottom"><a href="#" class="liline">当サイトのポリシー</a></li>
+      <li><a href="#" class="liline">お問い合わせ</a></li>
+    </ul>
+  </nav>
+  <!-- ここまで -->
+
+  <div id="modal-overlay" class="modal-overlay" tabindex="-1" aria-hidden="true" style="display:none;">
+    <div class="modal-window" role="dialog" aria-modal="true">
+      <button class="modal-close" aria-label="閉じる">
+        <img src="images/m-close.png" alt="閉じる" />
+      </button>
+      <div class="modal-content">
+        <h2 class="modal-title"></h2>
+        <img class="modal-img" src="" alt="" />
+        <p class="modal-description"></p>
+        <ul class="modal-hours"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/script.js"> </script>
+
+</body>
+
+</html>
