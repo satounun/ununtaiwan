@@ -1,0 +1,863 @@
+@charset "UTF-8";
+body{
+    font-family: 'Zen Kaku Gothic New';
+    font-size: 1.2rem;
+    background-color: #FDFCFA;
+}
+.pc_nav{ 
+    display: block !important; 
+}
+#nav{
+    display: none;
+}
+.hamburger{ 
+    display: none !important;
+}
+
+/* ローディングページここから */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #007AB7;
+    z-index: 101;
+    transition: opacity 0.5s ease;
+}
+.loading_logo {
+    width: 25%;
+    animation: blinking 3s linear infinite;
+}
+@keyframes blinking {
+    0% { opacity: 0; }
+    50% { opacity: 1;}
+    100% { opacity: 0; }
+}
+#wrapper {
+    display: none;
+}
+#wrapper.show_body {
+    display: block;
+    pointer-events: auto;
+}
+/* ここまで */
+
+header{
+    width: 100%;
+    height: 94px;
+    padding: 0 8%;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0,0,0,0.25);
+    color: #fff;
+    position: fixed;
+    z-index: 100;
+}
+h1 img{
+    height: 54px;
+    width: 133px;
+}
+header ul{
+    display: flex;
+}
+header li{
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-right: 20px;
+}
+header li:last-of-type{
+    margin-right: 0;
+}
+header li:hover{
+    transform: scale(1.1);
+}
+.pc_nav{
+    display: flex;
+}
+
+.topSec{
+    height: 768px;
+    background: url(../../images/hero.png) no-repeat right center/cover;
+}
+.heroImg img{
+    width: 60%;
+}
+.heroDiv{
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+.heroImg{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.sns{
+    transform: translateY(-140%);
+    margin-left: 8%;
+    }
+.sns li img{
+    width: 32px;
+}
+.sns li{
+    margin-bottom: 40px;
+}
+.sns img:hover{
+    transform: scale(1.2);
+}
+
+.toumei{
+    background-color: rgba(255,255,255,0.6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 80px 8%;
+}
+.formosa1{
+    background: url(../../images/formosa.png) no-repeat right center/cover;
+}
+.formosa2{
+    background: url(../../images/formosa2.png) no-repeat right center/cover;
+}
+.for1img,
+.for2img{
+    flex-basis: 55%;
+}
+.for1img img,
+.for2img img{
+    width: 100%;
+}
+h2{
+    font-size: 48px;
+    text-align: left;
+}
+.land{
+    font-size: 32px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #000;
+}
+.formosa1L{
+    flex-basis: 40%;
+    text-align: center;
+}
+.flagimg img{
+    width: 25%;
+}
+.flagimg{
+    margin-bottom: 100px;
+}
+.formosa2L{
+    flex-basis: 40%;
+    overflow-wrap: normal;
+    padding: 60px 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+.formosa2L p{
+    line-height: 32px;
+}
+
+.h2G{
+    padding: 50px 8%;
+}
+.katakana{
+    font-size: 24px;
+}
+.h2G h2,
+.h2Area h2{
+    padding-left: 125px;
+}
+.h2G p,
+.h2Area p{
+    position: relative;
+    top: -70px;
+}
+
+/* スライダーの見える枠 */
+.slide_wrapper {
+    width: 100%;
+    max-width: 100%;
+    height: 467px;
+    padding-bottom: 50%;
+    position: relative;
+    overflow: hidden;
+    margin: 30px auto 80px;
+}
+/* スライド本体（7枚分の幅！） */
+.slide {
+    display: flex;
+    width: calc((100% / 3.5) * 7); /* 7枚分の幅 */
+    transition: all 0.5s ease;   
+    transform: translateX(-10.6%);
+    opacity: 1;
+}
+.slide.animating{
+    opacity: 0.9;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+/* 1枚分のスライド */
+.slide > div {
+    flex: 0 0 calc(100% / 7); /* 7分割で1枚分 */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* 画像 */
+.slide img {
+    width: 80%;
+    object-fit: cover;
+}
+/* スライド右にずれる */
+.slide_right_remove{
+    justify-content: flex-start;
+}
+.slide_right{
+    justify-content: flex-end;
+}
+/* スライド左にずれる */
+.slide_left_remove{
+    justify-content: flex-end;
+}
+.slide_left{
+    justify-content: flex-start;
+}
+/* 矢印ボタン */
+.prev, .next {
+    position: absolute;
+    top: 83%;
+    width: 64px;
+    height: 64px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+}
+.prev { left: 20%; }
+.next { right: 20%; }
+/* インジケーター */
+.indicator {
+    display: flex;
+    justify-content: center;
+    margin-top: 4.5%;
+    list-style: none;
+    padding: 0;
+}
+.list {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.5);
+    margin: 0 2%;
+    cursor: pointer;
+}
+.list.active {
+   background-color: #000;
+}
+
+
+.travelSec{
+    padding: 50px 8%;
+}
+.reverse{
+    text-align: right;
+}
+.reverse h2{
+    text-align: right;
+    margin-right: 120px;
+}
+.recomend{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3%;
+}
+.mireitou p{
+    line-height: 32px;
+}
+.mireitou{
+    flex-basis: 36%;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    padding: 60px 0;
+}
+.map{
+    position: relative;
+    flex-basis: 35%;
+    margin-bottom: 200px;
+}
+.map img{
+    width: 225px;
+}
+.spot .taipei{
+    width: 99px;
+    position: absolute;
+    left: 219px;
+    top: 30px;
+}
+.spot .taichu{
+    width: 99px;
+    position: absolute;
+    left: -90px;
+    top: 80px;
+}
+.spot .tainan{
+    width: 99px;
+    position: absolute;
+    left: -10px;
+    top: 400px;
+}
+.spot .taipei:hover,
+.spot .taichu:hover,
+.spot .tainan:hover{
+    transform: scale(1.1);
+}
+.border{
+    margin: 0 auto 80px;
+    width: 480px;
+    border-bottom: 1px solid #000;
+}
+
+.eventSec{
+    padding: 50px 8%;
+}
+h3{
+    font-size: 36px;
+    line-height: 58px;
+    margin-bottom: 40px;
+}
+.rantan{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+.rantanL,
+.partyL{
+    flex-basis: 48%;
+}
+.rantanL img,
+.partyL img{
+    width: 100%;
+}
+.rantanR{
+    flex-basis: 40%;
+    text-align: center;
+}
+.rantanR dl{
+    line-height: 300%;
+    margin-bottom: 20px;
+}
+.rantanR p{
+    text-align: left;
+    width: 70%;
+    line-height: 32px;
+    padding: 32px 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin: 0 auto;
+}
+.party{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 160px;
+}
+.partyR{
+    flex-basis: 40%;
+    text-align: center;
+}
+.partyR dl{
+    line-height: 300%;
+    margin-bottom: 20px;
+}
+.partyR p{
+    text-align: left;
+    width: 70%;
+    line-height: 32px;
+    padding: 32px 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin: 0 auto;
+}
+
+.information{
+    padding: 0 0 80px;
+    margin-bottom: 30px;
+    border: 1px solid #000;
+}
+.information h3{
+    font-size: 40px;
+    margin: 40px 0;
+    text-align: center;
+}
+.information ul{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 20px;
+}
+.infoR li,
+.infoL li{
+    list-style-type: square;
+}
+.infoR dl,
+.infoL dl{
+    display: flex;
+}
+.infoR,
+.infoL{
+    flex-basis: 45%;
+}
+.infoR dt,
+.infoL dt{
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.toTop{
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+}
+.toTop img{
+    width: 100px;
+}
+
+footer{
+    background-color: #007AB7;
+    color:#fff;
+}
+.footerLine{
+    padding: 0 80px;
+    width: 100%;
+    border-bottom: 1px solid #03A9F4;
+}
+.footerFlag img{
+    width: 64px;
+}
+.footerFlag{
+    padding-top: 40px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+.footerWrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 30px;
+}
+.footerNav{
+    flex-basis: 27%;
+}
+.li_mb{
+    display: none !important;
+}
+.footerNav li{
+    width: 100%;
+    padding-top: 10px;
+    line-height: 200%;
+    border-bottom: 1px solid #fff;
+}
+.footerNav li:hover{
+    padding-left: 10px;
+}
+.footerWrap p img{
+    width: 256px;
+}
+.sns_footer{
+    flex-basis: 27%;
+}
+.sns_footer ul{
+    display: flex;
+    justify-content: right;
+}
+.sns_footer li img{
+    width: 32px;
+}
+.sns_footer li{
+    margin-right: 40px;
+}
+.sns_footer li:last-of-type{
+    margin-right: 0;
+}
+.sns_footer li img:hover{
+    transform: scale(1.2);
+}
+.small{
+    text-align: center;
+    padding: 20px;
+}
+
+
+@media screen and (max-width: 768px){
+    body{
+        font-size: 12px;
+    }
+    .loading_logo {
+        width: 80%;
+    }
+
+    header{
+        height: 0;
+        padding: 0;
+        display: block;
+        background-color: rgba(0,0,0,0);
+    }
+    .pc_nav{ 
+        display: none !important; 
+    }
+    .pc_h1{
+        display: none !important; 
+    }
+    .hamburger{ 
+        display: block !important;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+    .hamburger img{
+        width: 48px;
+    } 
+
+    .topSec_mb{
+        background: url(../../images/heroM.png) no-repeat right center/cover;
+        height: 100vh;
+    }
+    .heroImg img{
+        width: 95%;
+    }
+    .sns{
+        margin-left: 5%;
+    }
+    .sns li{
+        margin-bottom: 20px;
+    }
+
+
+    .formosa1,
+    .formosa2{
+        background-position: -440px 0px;
+    }
+    .toumei{
+        display: block;
+        padding: 20px 5% 60px;
+    }
+    .h2for{
+        font-size: 20px;
+        line-height: 220%;
+        text-align: center;
+    }
+    .land{
+        font-size: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #000;
+    }
+    .for1img{
+        margin-top: 60px;
+    }
+    .flagimg img{
+        width: 32px;
+    }
+    .flagimg{
+        margin-bottom: 40px;
+    }
+    .formosa2L{
+        width: 64%;
+        padding: 12px 0;
+        margin: 0 auto;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+    }
+    .formosa2L p{
+        line-height: 19px;
+    }
+    .for2img{
+        margin-top: 80px;
+    }
+
+    .h2G{
+        padding: 20px 0;
+    }
+    h2{
+        font-size: 24px;
+        text-align: center;
+    }
+    .katakana{
+        font-size: 12px;
+    }
+    .h2Area{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .h2G h2,
+    .h2Area h2{
+        padding-left: 0;
+    }
+    .h2G p,
+    .h2Area p{
+        position: relative;
+        top: -35px;
+    }
+    .h2G p img,
+    .h2Area p img{
+        width: 67%;
+    }
+
+    .slide_viewport {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    .slide_wrapper {
+        margin-bottom: 0;
+        padding-bottom: 170%;
+    }
+    .slide {
+        width: calc((100% / 1) * 7);
+        transform: translateX(0) !important;
+    }
+    .slide > div {
+        padding: 0 20px;
+    }
+    .slide > div img{
+        width: 100%;
+    }
+    .prev, .next {
+        display: none !important;
+    }
+    .indicator{
+        margin-top: 7%;
+    }
+    .list {
+        width: 18px;
+        height: 18px;
+        margin: 0 20px;
+    }
+
+    .travelSec{
+        padding: 
+        20px 5%;
+    }
+    .reverse{
+        text-align: center;
+    }
+    .reverse h2{
+        text-align: center;
+        margin-right: 0px;
+    }
+    .recomend{
+        display: block;
+        padding: 0;
+    }
+    .mireitou p{
+        line-height: 19px;
+    }
+    .mireitou{
+        width: 65%;
+        border-bottom: 1px solid #000;
+        border-top: 1px solid #000;
+        padding: 12px 0;
+        margin: 0 auto 60px;
+    }
+    .map{
+        position: relative;
+        margin-bottom: 120px;
+        text-align: center;
+    }
+    .map img{
+        width: 180px;
+    }
+    .spot .taipei{
+        width: 59px;
+        position: absolute;
+        left: 255px;
+        top: 30px;
+    }
+    .spot .taichu{
+        width: 59px;
+        position: absolute;
+        left: 30px;
+        top: 100px;
+    }
+    .spot .tainan{
+        width: 59px;
+        position: absolute;
+        left: 85px;
+        top: 320px;
+    }
+    .border{
+        margin: 0 auto;
+        width: 223px;
+        border-bottom: 1px solid #000;
+    }
+
+    .eventSec{
+        padding: 50px 5%;
+    }
+    h3{
+        font-size: 20px;
+        line-height: 32px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .rantan{
+        display: block;
+        margin-bottom: 60px;
+    }
+    .rantanL,
+    .partyL{
+        margin-bottom: 20px;
+    }
+    .rantanR dl{
+        line-height: 200%;
+        margin-bottom: 20px;
+    }
+    .rantanR p{
+        width: 65%;
+        line-height: 19px;
+        padding: 12px 0;
+    }
+    .party{
+        display: block;
+        margin-bottom: 100px;
+    }
+    .partyR dl{
+        line-height: 200%;
+        margin-bottom: 20px;
+    }
+    .partyR p{
+        width: 65%;
+        line-height: 19px;
+        padding: 12px 0;
+    }
+
+    .information{
+        padding: 0 20px 40px;
+        margin-bottom: 10px;
+    }   
+    .information h3{
+        font-size: 20px;
+        margin: 20px 0 40px; 
+        text-align: center;
+    }
+    .information ul{
+        display: block;
+    }
+    .infoR dl,
+    .infoL dl{
+        line-height: 19px;
+    }
+    .infoL{
+        margin-bottom: 40px;
+    }
+    .infoR div{
+        display: flex;
+    }
+    .infoRR{
+        margin-left: 30px;
+    }
+
+    .toTop img{
+        width: 48px;
+    }
+
+    .footerLine{
+        padding: 0 5%;
+    }
+    .footerFlag img{
+        width: 32px;
+    }
+    .footerFlag{
+        padding: 20px 0;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .footerWrap{
+        display: block;
+    }
+    .footerNav{
+        width: 53%;
+        margin: 0 auto 10px;
+    }
+    .footerWrap p img{
+        transform: translateY(30px);
+    }
+    .footerWrap p img{
+        width: 25%;
+    }
+    .sns_footer ul{
+        justify-content: center;
+    }
+    .li_mb{
+        display: block !important;
+    }
+    .sns_footer li{
+        margin-right: 20px;
+    }
+    .ensp{
+        width: 25%;
+    }
+    .small{
+        padding: 12px;
+    }
+
+    /* ドロワーメニューここから */
+    #nav{
+        position: fixed;
+        right: -225px;
+        top: 0;
+        display: block !important;
+        background-color: rgba(0, 122, 183, 0.9);
+        color: #fff;    
+        font-size: 24px;
+        font-weight: bold;
+        width: 225px;
+        height: 100vh;
+    }
+    .batu{
+        position: absolute;
+        top: 4px;
+        right: 4px;
+    }
+    .batu img{
+        width: 48px;
+    }
+    .logo{
+        width: 45%;
+        padding: 10px;
+        margin-bottom: 20%;
+    }
+    .logo img{
+        width: 100%;
+    }
+    #nav ul{
+        text-align: center;
+    }
+    .menu{
+        margin-bottom: 20%;
+    }
+    .liline{
+        font-size: 20px;
+        border-bottom: 2px solid rgba(255,255,255,0.2);
+    }
+    .libottom{
+        margin-bottom: 15%;
+    }
+    .libottom2{
+        margin-bottom: 8%;
+    }
+
+    .show{
+        transform: translate3d( -225px, 0, 0);
+        transition: transform 0.5s ease;
+    }
+    .show_reverse{
+        transform: translate3d(255px, 0, 0);
+        transition: transform 1s ease;
+    }
+    /* ここまで */
+
+}
