@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- SPでメディアクエリを効かせるため必須 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>台南&nbsp;|&nbsp;TAIWAN.traveler.cc</title>
+  <!-- 共通リセットCSS -->
+  <link rel="stylesheet" href="../common/reset.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;900&display=swap" rel="stylesheet">
+  <!-- 台南ページ用CSS -->
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/modal.css" />
+</head>
+
+<body id="top">
+  <!-- loadingここから (bodyのすぐ下に)-->
+  <div class="loading" id="loading">
+    <div class="loading_logo"><img src="../images/taiwanLogo.svg" alt=""></div>
+  </div>
+  <div id="wrapper">
+    <!-- ■ ヘッダー -->
+    <header>
+      <h1 class="pc_h1"><img src="../images/taiwanLogo.svg" alt=""></h1>
+      <nav class="pc_nav">
+        <ul>
+          <li><a href="../index.html" class="all-caps">home</a></li>
+          <li><a href="../taipei/index.html">台北</a></li>
+          <li><a href="../taichu/index.html">台中</a></li>
+          <li><a href="#">台南</a></li>
+          <li><a href="#">当サイトのポリシー</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- ヒーローセクション（台南用）-->
+    <!-- ── SP用固定ロゴ（デフォルトでは隠す。メディアクエリで表示） ── -->
+    <div class="sp-logo">
+      <img src="../images/taiwanLogo.svg" alt="サイトロゴ" />
+    </div>
+    <div class="hero">
+      <!-- PC版：ヒーロー背景画像 -->
+      <img src="images/pcTnHero.png" alt="台南ヒーロー" class="hero_bg-image" />
+      <!-- 白抜き「台南」タイトル -->
+      <img src="images/pcHeroTainan.png" alt="台南" class="hero_title-image" />
+      <!-- ヒーロー説明文 -->
+      <div class="hero_copy">
+        台湾の古都「台南」台南はお寺などの史跡巡りや、リノベエリアの散策が楽しめる、新旧の魅力が交わる街です。
+      </div>
+      <!-- SNSアイコン -->
+      <div class="hero_sns">
+        <a href="#"><img src="../images/fbLogo.png" alt="Facebook" /></a>
+        <a href="#"><img src="../images/instaLogo.png" alt="Instagram" /></a>
+        <a href="#"><img src="../images/twittterLogo.png" alt="X (旧Twitter)" /></a>
+      </div>
+      <!-- トップへ戻るボタン -->
+      <a href="#top" class="back-to-top" aria-label="トップへ戻る">
+        <img src="images/gotoTop.svg" alt="Topへ戻る" />
+      </a>
+    </div>
+    <!-- ■ パンくずナビ -->
+    <nav class="breadcrumb">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><span class="sep">&gt;</span></li>
+        <li><a href="#">Travel</a></li>
+        <li><span class="sep">&gt;</span></li>
+        <li>台南</li>
+      </ul>
+    </nav>
+    <!-- メインコンテンツ-->
+    <main>
+      <!-- ハンバーガーメニュー -->
+      <div class="hamburger" id="open_nav">
+        <img src="../images/hamburger.svg" alt="">
+      </div>
+
+      <!-- ■ Attraction 観光名所 -->
+      <section id="attraction">
+        <h2 class="section-title section-title--left">
+          <div class="section-title_text">
+            <span class="en-text">Attraction</span>
+            <span class="jp-text">観光名所</span>
+          </div>
+        </h2>
+        <!-- — 安平老街 — -->
+        <article class="attraction-item">
+          <h3 class="wide-bold">安平老街</h3>
+          <div class="attraction-content">
+            <div class="attraction-item_media">
+              <img src="images/pcTnSpotAnpingMain.png" alt="安平老街 メイン画像" class="main-img" />
+              <div class="sub-imgs">
+                <img src="images/pcTnSpotAnpingSub01.png" alt="安平老街 サブ1" />
+                <img src="images/pcTnSpotAnpingSub02.png" alt="安平老街 サブ2" />
+              </div>
+            </div>
+            <div class="text-block">
+              <div class="text-block-A">
+                <p class="description">
+                  「台湾の京都」の異名をとる、古都・台南。かつて台湾の首都であったことから、
+                  重要な史跡が点在し、ノスタルジックなムードが漂っています。17世紀に造られた
+                  台湾最古の街は現在、台湾レトロとも称され数々の掘り出し物やお土産、飲食店が
+                  立ち並び写真スポットとしても人気の高いエリアになっています。
+                </p>
+              </div>
+              <div class="text-block-B">
+                <p class="time">露店めぐりは日中、ノスタルジックな撮影は夜がおすすめです。</p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="separator"></div>
+        <!-- — 赤崁樓 — -->
+        <article class="attraction-item">
+          <h3 class="wide-bold">赤崁樓</h3>
+          <div class="attraction-content">
+            <div class="attraction-item_media">
+              <img src="images/pcTnSpotChikanMain.png" alt="赤崁樓 メイン画像" class="main-img" />
+              <div class="sub-imgs">
+                <img src="images/pcTnSpotChikanSub01.png" alt="赤崁樓 サブ1" />
+                <img src="images/pcTnSpotChikanSub02.png" alt="赤崁樓 サブ2" />
+              </div>
+            </div>
+            <div class="text-block">
+              <div class="text-block-A">
+                <p class="description">
+                  赤嵌楼（赤嵌樓）は台南中西区の代表的な古跡で、安平区の安平古堡と並んで
+                  台南の二大古跡になっています夜になると、赤嵌楼周辺には黄色いライトが灯り、
+                  古い建築物をより一層味わい深く演出します。前方の広場ではよく音楽会が催され、
+                  台南市民の夜の憩いの場になっています。赤嵌楼は、昼も夜も独特の魅力で楽しませてくれます。
+                </p>
+              </div>
+              <div class="text-block-B">
+                <p class="time2">夜はライトアップも楽しめます。<br>
+                  <span class="time_bold"><span class="open-time">営業時間&emsp;</span>8:30～21:30</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="separator"></div>
+      </section>
+      <!-- ■ Gourmet グルメ -->
+      <section id="gourmet">
+        <h2 class="section-title section-title--right">
+          <div class="section-title_text">
+            <span class="en-text">Gourmet</span>
+            <span class="jp-text">グルメ</span>
+          </div>
+        </h2>
+        <div class="gourmet_intro">
+          <p>
+            グルメが有名な台南において特に有名であり、台南でしか味わえないものをご紹介いたします。
+          </p>
+        </div>
+        <div class="gourmet-grid">
+          <!-- — 担仔麺 — -->
+          <div class="gourmet-item">
+            <div class="gourmet-text">
+              <h3>担仔麺<span>タンツーメン</span></h3>
+              <img src="images/pcDuHsiao.png" alt="担仔麺" class="gourmet-img" />
+              <p>
+                日本の台湾ラーメンの元祖とも言われるグルメ。
+                中でも「度小月」は各地に支店を持つ人気店。台南ではその度小月本店があり連日大人気です。
+              </p>
+              <a href="#" class="js-modal-trigger" data-modal="danzai">画像を見る</a>
+              <div class="gourmet_separator"></div>
+            </div>
+          </div>
+          <!-- — 蝦仁飯 — -->
+          <div class="gourmet-item">
+            <div class="gourmet-text">
+              <h3>蝦仁飯<span>エビ飯</span></h3>
+              <img src="images/pcTnFoodAizai.png" alt="蝦仁飯" class="gourmet-img" />
+              <p>
+                台南10大美食にも選ばれている代表料理。中でも有名なのが「矮仔成」。
+                台湾でも台南に来ないと味わえない料理で日本人が大好きな味です。
+              </p>
+              <a href="#" class="js-modal-trigger" data-modal="ebi">画像を見る</a>
+              <div class="gourmet_separator"></div>
+            </div>
+          </div>
+          <!-- — 小籠包 — -->
+          <div class="gourmet-item">
+            <div class="gourmet-text">
+              <h3>小籠包<span>ショウロンポー</span></h3>
+              <img src="images/pcTnSpotShanghai.png" alt="小籠包" class="gourmet-img" />
+              <p>
+                台湾料理のといえば小籠包。台南にある「上海華都小吃」は、
+                ミシュラン掲載実績や台湾政府から表彰されている元祖「松針小籠包」誕生の地です。
+              </p>
+              <a href="#" class="js-modal-trigger" data-modal="xiao">画像を見る</a>
+              <div class="gourmet_separator"></div>
+            </div>
+          </div>
+          <!-- — 鴨肉飯 — -->
+          <div class="gourmet-item">
+            <div class="gourmet-text">
+              <h3>鴨肉飯<span>ヤーロウファン</span></h3>
+              <img src="images/pcTnFoodYade.png" alt="鴨肉飯" class="gourmet-img" />
+              <p>
+                小吃（シャオチー）と呼ばれる台湾の軽食文化、
+                その中でも人気な一品が「亞德當歸鴨」の鴨肉飯。やすい・はやい・うまいの原点です。
+              </p>
+              <a href="#" class="js-modal-trigger" data-modal="yarou">画像を見る</a>
+              <div class=" gourmet_separator">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--  ピックアップ -->
+      <h2 class="section-title section-title--left">
+        <div class="section-title_text">
+          <span class="en-text">Pickup</span>
+          <span class="jp-text">ピックアップ</span>
+        </div>
+      </h2>
+      <section class="pickup">
+        <h2 class="pickup-subtitle">蓮と温泉の国&emsp;白河</h2>
+        <hr class="pickup-underline">
+        <p class="pickup-description">
+          きらびやかな都心や歴史情緒ある台湾。そんな台湾のもう一つの楽しみ方が
+          自然に囲まれながらの観光です。観光客の少ない所でゆっくり楽しみたい方におすすめです。
+        </p>
+        <div class="pickup-row pickup-first">
+          <div class="pickup-image">
+            <img src="images/pcTnSpotOnsen.png" alt="関子嶺温泉の看板">
+          </div>
+          <div class="pickup-text">
+            <p>
+              温泉名：関子嶺温泉<br>
+              （グァンスーリン・ウェンチュエン）<br>
+              台湾４大温泉地の一つで、白河周辺には数々のホテルがあり、温泉を楽しむことができます。
+              このエリアは泥温泉が有名で国内外問わず女性に大人気です。
+            </p>
+          </div>
+        </div>
+        <div class="pickup-row pickup-gallery-two">
+          <img src="images/pcTnHotel01.png" alt="ホテル外観１">
+          <img src="images/pcTnHotel02.png" alt="ホテル外観２">
+        </div>
+        <p class="pickup-caption">
+          温泉宿は最新のホテルから老舗の旅館まで多種多様に揃っています。
+        </p>
+        <div class="pickup-row pickup-final">
+          <div class="pickup-image-large">
+            <img src="images/pcTnDairen.png" alt="蓮の池">
+          </div>
+          <div class="pickup-final-text">
+            <p>
+              蓮の実の生産で台湾全土の3分の2の生産量を占める「蓮のふるさと」。
+              美しい白河で癒しの時間をお過ごしください。
+            </p>
+            <img class="pc-img" src="images/pcTnSpotLotus.png" alt="蓮の花">
+            <img class="sp-img" src="images/spTnSpotLotus.png" alt="蓮の花（スマホ用）">
+          </div>
+        </div>
+        <div class="separator"></div>
+      </section>
+    </main>
+    <!-- フッター 佐藤さん制作-->
+    <footer>
+      <div class="footerLine">
+        <p class="footerFlag"><img src="../images/taiwanFlag.png" alt=""></p>
+        <div class="footerWrap">
+          <nav class="footerNav">
+            <ul>
+              <li class="li_mb"><a href="#">TOPへもどる</a></li>
+              <li><a href="../index.html" class="all-caps">home</a></li>
+              <li><a href="../taipei/index.html">台北</a></li>
+              <li><a href="../taichu/index.html">台中</a></li>
+              <li><a href="#top">台南</a></li>
+              <li><a href="#">当サイトのポリシー</a></li>
+              <li><a href="#">お問い合わせ</a></li>
+            </ul>
+          </nav>
+          <p><a href="#top"><img src="../images/taiwanLogo.svg" alt=""></a></p>
+          <div class="sns_footer">
+            <ul>
+              <li><a href="#"><img src="../images/fbLogo.png" alt=""></a></li>
+              <li><a href="#"><img src="../images/instaLogo.png" alt=""></a></li>
+              <li><a href="#"><img src="../images/twittterLogo.png" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="small"><small>Copyright (C) 2023 TAIWAN.traveler.cc</small></p>
+    </footer>
+    <!-- ドロワーメニューここから（footer下、/body前） -->
+    <nav id="nav">
+      <div class="logo">
+        <a href="#top"><img src="../images/taiwanLogo.svg" alt=""></a>
+      </div>
+      <div class="batu" id="batu">
+        <img src="../images/batu.png" alt="">
+      </div>
+      <ul>
+        <li class="menu">Menu</li>
+        <li class="libottom"><a href="../index.html" class="liline" class="all-caps">HOME</a></li>
+        <li class="libottom2"><a href="../taipei/index.html" class="liline">台北</a></li>
+        <li class="libottom2"><a href="../taichu/index.html" class="liline">台中</a></li>
+        <li class="libottom"><a href="#top" class="liline">台南</a></li>
+        <li class="libottom"><a href="#" class="liline">当サイトのポリシー</a></li>
+        <li><a href="#" class="liline">お問い合わせ</a></li>
+      </ul>
+    </nav>
+    <!-- ここまで -->
+  </div>
+  <div id="modal-overlay" class="modal-overlay" tabindex="-1" aria-hidden="true" style="display:none;">
+    <div class="modal-window" role="dialog" aria-modal="true">
+      <button class="modal-close" aria-label="閉じる">
+        <img src="images/m-close.png" alt="閉じる" />
+      </button>
+      <div class="modal-content">
+        <img class="modal-img" src="" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>
